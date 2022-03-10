@@ -9,3 +9,12 @@ $ oc new-build . --name=hello-world-python --to-docker --to=docker.io/dockeruser
 $ oc start-build hello-world-python --from-dir=. --follow --wait
 ```
 
+## Deploy to OpenShift 4
+```
+$ oc new-app . --docker-image=labs2022/hello-world-python --name=hello-world-python-app
+```
+
+## Expose a Secure URL for this Flask app
+```
+$ oc create route edge --service=hello-world-python-app
+```
