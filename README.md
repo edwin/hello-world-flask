@@ -11,7 +11,7 @@ $ oc start-build hello-world-python --from-dir=. --follow --wait
 
 ## Deploy to OpenShift 4
 ```
-$ oc new-app . --docker-image=labs2022/hello-world-python --name=hello-world-python-app
+$ oc new-app . --docker-image=dockerusername/hello-world-python --name=hello-world-python-app
 ```
 
 ## Expose a Secure URL for this Flask app
